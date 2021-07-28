@@ -2,4 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+header, footer {
+  background-color: #323232;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }/*# sourceMappingURL=bio.css.map */
