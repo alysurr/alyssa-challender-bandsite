@@ -1,6 +1,6 @@
 @use 'partials/partial' as *;
-@use 'partials/mixins';
-
+@use 'partials/mixins' as *;
+@use 'partials/typography' as *;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -10,11 +10,72 @@
 
 header, footer {
     background-color: $band-site-black;
+    width: 100%;
     color: #fff;
 }
 
 a {
     text-decoration: none;
     color: #fff;
+}
+
+h1 {
+    font-family: 'Avenir Next';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h2 {
+    font-family: 'Avenir Next';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h3 {
+    font-family: 'Avenir Next';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    
+}
+
+p {
+    font-family: 'Avenir Next';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+li {
+    list-style: none;
+}
+
+.site-name {
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+    font-size: 36px;
+    padding: 24px 0px;
+}
+
+.nav-bar {
+    &__list {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__item {
+        font-family: 'Avenir Next';
+        font-size: 20px;
+        font-weight: 400;
+        padding-bottom: 24px;
+        width: 100%;
+        text-align: center;
+        &--active {
+            font-weight: 600;
+            border-bottom: 5px solid #fff;
+        }
+    }
 }
 
