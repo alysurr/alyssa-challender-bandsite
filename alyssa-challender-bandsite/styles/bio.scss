@@ -86,13 +86,30 @@ li {
     &__title {
         position: absolute;
         color: #fff;
-        margin: 30% 10%;
+        margin: 30% 16px;
         z-index: 2;
     }
     &__background {
         width: 100vw;
         opacity: .5;
         object-fit: cover;
+    }
+}
+
+.biography {
+    padding: 16px;
+    &__title {
+        padding-top: 24px;
+    }
+    &__image {
+        width: 100%;
+        padding: 16px 0;
+    }
+    &__tagline {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        padding-bottom: 8px;
     }
 }
 

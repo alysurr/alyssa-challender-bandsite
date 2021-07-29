@@ -94,7 +94,7 @@ li {
 .hero__title {
   position: absolute;
   color: #fff;
-  margin: 30% 10%;
+  margin: 30% 16px;
   z-index: 2;
 }
 .hero__background {
@@ -102,4 +102,21 @@ li {
   opacity: 0.5;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.biography {
+  padding: 16px;
+}
+.biography__title {
+  padding-top: 24px;
+}
+.biography__image {
+  width: 100%;
+  padding: 16px 0;
+}
+.biography__tagline {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 8px;
 }/*# sourceMappingURL=bio.css.map */
