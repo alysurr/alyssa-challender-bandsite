@@ -40,7 +40,7 @@ h1 {
 h2 {
   font-family: "Avenir Next";
   font-weight: 600;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 32px;
 }
 
@@ -54,8 +54,8 @@ h3 {
 p {
   font-family: "Avenir Next";
   font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 li {
@@ -119,4 +119,22 @@ li {
   font-size: 18px;
   line-height: 28px;
   padding-bottom: 8px;
+}
+.biography__name {
+  padding: 16px 0;
+}
+.biography p {
+  padding: 8px 0;
+}
+
+.gallery {
+  padding: 8px 16px;
+  background-color: #FAFAFA;
+}
+.gallery__title {
+  padding: 24px 0 8px 0;
+}
+.gallery__image {
+  width: 100%;
+  padding: 8px 0;
 }/*# sourceMappingURL=bio.css.map */
