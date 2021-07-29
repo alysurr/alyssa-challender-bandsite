@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("otf"), url("../../assets/Font/AvenirNextLTPro-Demi.ttf") format("ttf"), url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("otf"), url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("otf"), url("../../assets/Font/AvenirNextLTPro-Regular.ttf") format("ttf"), url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("otf"), url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("otf"), url("../../assets/Font/AvenirNextLTPro-Bold.ttf") format("ttf"), url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("otf"), url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: 700;
 }
 *, *::before, *::after {
@@ -33,13 +33,13 @@ a {
 h1 {
   font-family: "Avenir Next";
   font-weight: 700;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 32px;
 }
 
 h2 {
   font-family: "Avenir Next";
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;
   line-height: 32px;
 }
@@ -64,7 +64,7 @@ li {
 
 .site-name {
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 400;
   text-align: center;
   font-size: 36px;
   padding: 24px 0px;
@@ -78,11 +78,28 @@ li {
   font-family: "Avenir Next";
   font-size: 20px;
   font-weight: 400;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
   width: 100%;
   text-align: center;
 }
 .nav-bar__item--active {
   font-weight: 600;
   border-bottom: 5px solid #fff;
+}
+
+.hero {
+  position: relative;
+  background: #323232;
+}
+.hero__title {
+  position: absolute;
+  color: #fff;
+  margin: 30% 10%;
+  z-index: 2;
+}
+.hero__background {
+  width: 100vw;
+  opacity: 0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=bio.css.map */

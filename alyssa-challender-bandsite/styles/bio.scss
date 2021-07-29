@@ -22,13 +22,13 @@ a {
 h1 {
     font-family: 'Avenir Next';
     font-weight: 700;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 32px;
 }
 
 h2 {
     font-family: 'Avenir Next';
-    font-weight: 700;
+    font-weight: 600;
     font-size: 24px;
     line-height: 32px;
 }
@@ -54,7 +54,7 @@ li {
 
 .site-name {
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 400;
     text-align: center;
     font-size: 36px;
     padding: 24px 0px;
@@ -69,13 +69,30 @@ li {
         font-family: 'Avenir Next';
         font-size: 20px;
         font-weight: 400;
-        padding-bottom: 24px;
+        padding-bottom: 16px;
         width: 100%;
         text-align: center;
         &--active {
             font-weight: 600;
             border-bottom: 5px solid #fff;
         }
+    }
+}
+
+.hero {
+    position: relative;
+    background: $band-site-black;
+    
+    &__title {
+        position: absolute;
+        color: #fff;
+        margin: 30% 10%;
+        z-index: 2;
+    }
+    &__background {
+        width: 100vw;
+        opacity: .5;
+        object-fit: cover;
     }
 }
 
