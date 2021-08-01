@@ -1,17 +1,13 @@
 @use 'partials/partial' as *;
 @use 'partials/mixins' as *;
 @use 'partials/typography' as *;
+@use 'partials/gallery';
+@use 'partials/headerfooter';
 
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-header, footer {
-    background-color: $band-site-black;
-    width: 100%;
-    color: #fff;
 }
 
 a {
@@ -21,156 +17,200 @@ a {
 
 h1 {
     font-family: 'Avenir Next';
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 32px;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }   
+    
 }
 
 h2 {
     font-family: 'Avenir Next';
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 32px;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 3rem;
+    }
+    @include desktop {
+        font-size: 2.25rem;
+        line-height: 3rem;
+    }   
 }
 
 h3 {
     font-family: 'Avenir Next';
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 22px;
-    
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.375rem;
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    @include desktop {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }   
 }
 
 p {
     font-family: 'Avenir Next';
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    @include tablet {
+        font-size: 1.3rem;
+        line-height: 1.375rem;
+    }
+    @include desktop {
+        font-size: 1.3rem;
+        line-height: 1.375rem;
+    }   
+    
 }
 
 li {
     list-style: none;
 }
 
-.site-name {
-    text-transform: uppercase;
-    font-weight: 400;
-    text-align: center;
-    font-size: 36px;
-    padding: 24px 0px;
-    &__footer {
-        text-align: left;
-        margin-top: 16px;
-    }
-}
-
-.nav-bar {
-    &__list {
-        display: flex;
-        justify-content: space-around;
-    }
-    &__item {
-        font-family: 'Avenir Next';
-        font-size: 20px;
-        font-weight: 400;
-        padding-bottom: 16px;
-        width: 100%;
-        text-align: center;
-        &--active {
-            font-weight: 600;
-            border-bottom: 5px solid #fff;
-        }
-    }
-}
+// Hero 
 
 .hero {
+    display: flex;
+    align-items: center;
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
-    background: $band-site-black;
-    
+    height: 35vh;
+    @include tablet {
+        height: 45vh;
+        background-position: bottom;
+    }
+    @include desktop {
+        height: 70vh;
+        background-position: center;
+    }   
     &__title {
         position: absolute;
         color: #fff;
-        margin: 30% 16px;
+        margin: 1rem;
         z-index: 2;
+        @include tablet {
+            margin: 0 2.5rem;
+        }
+        @include desktop {
+            margin: 0 8rem;
+        }   
     }
     &__background {
-        width: 100vw;
+        width: 100%;
+        height: 35vh;        
+        background-color: $band-site-black;
         opacity: .5;
-        object-fit: cover;
+        @include tablet {
+            height: 45vh;
+        }
+        @include desktop {
+            height: 70vh;
+        }   
     }
 }
+
+// Bio
 
 .biography {
-    padding: 16px;
+    padding: 1rem;
+    @include tablet {
+        padding: 2.5rem;
+    }
+    @include desktop {
+        padding: 3rem 8rem;
+    } 
+    &__container {
+        @include tablet {
+            padding: 0 4rem;
+        }
+        @include desktop {
+            padding: 0 6rem;
+        } 
+    }
     &__title {
-        padding-top: 24px;
+        padding-top: 1.5rem;
+        @include desktop {
+            padding-top: 0;
+        }
     }
     &__image {
         width: 100%;
-        padding: 16px 0;
+        height: 16rem;
+        object-fit: cover;
+        object-position: bottom;
+        padding: 2rem 0 1rem 0;
+        @include tablet {
+            height: 22rem;
+            object-position: center;
+        }
+        @include desktop {
+            height: 32rem;
+        } 
     }
     &__tagline {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 28px;
-        padding-bottom: 8px;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        padding-bottom: 0.5rem;
+        @include tablet {
+            font-size: 1.41rem;
+            line-height: 2rem;
+        }
+        @include desktop {
+            margin: 1rem 0 .5rem 0;
+            width: 82%;
+        } 
+    }
+
+    &__source {
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        padding-bottom: 0.5rem;
+        @include tablet {
+            font-size: 1rem;
+            padding-bottom: 2rem;
+        }
     }
     &__name {
-        padding: 16px 0;
+        padding: 1rem 0;
     }
-    & p {
-        padding: 8px 0;
+    &__text {
+        padding: 0.5rem 0;
+        @include tablet {
+            font-size: .9rem;
+            width: 49%;
+        }
+        @include desktop {
+        } 
+        } 
+    &__text-container {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+        @include desktop {
+        } 
     }
-}
-
-.gallery {
-    padding: 8px 16px;
-    background-color: $band-site-albaster;
-    &__title {
-        padding: 24px 0 8px 0;
     }
-    &__container {
-
-    }
-    &__image {
-        width: 100%;
-        padding: 8px 0;
-    }
-}
-
-footer {
-    padding: 24px 16px;
-}
 
 
-.contact {
-    &__title {
-        
-    }
-    &__icon-container {
-        display: flex;
-        justify-content: space-between;
-        width: 50%;
-        padding: 16px 0;
-    }
-    &__icon {
-        height: 30px;
-    }
-    &__container {
 
-    }
-    &__info {
 
-    }
-    &__name {
-        font-weight: 600;
-        padding: 16px 0;
-    }
-    &__details, &__email {
-        padding-bottom: 16px;
-    }
-}
-
-.copyright p {
-    font-size: 14px;
-}

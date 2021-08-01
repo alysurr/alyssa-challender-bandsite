@@ -1,0 +1,35 @@
+@use 'partial' as *;
+@use 'mixins' as *;
+@use 'typography' as *;
+
+.gallery {
+    padding: 0.5rem 1rem;
+    background-color: $band-site-albaster;
+    @include tablet {
+        padding: 2.5rem;
+    }
+    @include desktop {
+        padding: 2rem 8rem;
+    } 
+    &__title {
+        padding: 1.5rem 0;
+    }
+    &__container {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include desktop {
+        } 
+    }
+    &__image {
+        width: 100%;
+        padding: 0.5rem 0;
+        @include tablet {
+            width: 32%;
+        }
+    }
+}
+
+
