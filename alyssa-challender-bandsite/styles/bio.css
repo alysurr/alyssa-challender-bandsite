@@ -130,22 +130,97 @@ footer {
   background-color: #323232;
   width: 100%;
   color: #fff;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 3.5rem 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 3.5rem 8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    align-items: center;
+    width: 60%;
+  }
 }
 .contact__icon-container {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 45%;
   padding: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .contact__icon-container {
+    width: 20%;
+  }
 }
 .contact__icon {
-  height: 1.875rem;
+  height: 1.75rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__icon {
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact__container {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact__container {
+    width: 70%;
+  }
+}
+.contact__info {
+  padding: 0.25rem 0;
 }
 .contact__name {
-  font-weight: 500;
   padding: 1rem 0;
 }
-.contact__details, .contact__email {
+@media screen and (min-width: 768px) {
+  .contact__name {
+    margin-bottom: 0.75rem;
+  }
+}
+.contact__name p {
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .contact__name p {
+    font-size: 0.9rem;
+  }
+}
+.contact__details {
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__details {
+    margin-bottom: 0.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__details p {
+    font-size: 0.9rem;
+  }
+}
+.contact__email {
+  font-family: "Avenir Next";
+  font-size: 0.9rem;
   padding-bottom: 1rem;
 }
 
@@ -154,12 +229,21 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .copyright p {
-    font-size: 1rem;
+    padding-top: 2rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-bandsite-link {
+    position: absolute;
+    top: 1.25rem;
+    right: 0rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .copyright p {
-    font-size: 1rem;
+  .footer-bandsite-link {
+    right: 8rem;
   }
 }
 
@@ -186,12 +270,6 @@ h1 {
     line-height: 4.25rem;
   }
 }
-@media screen and (min-width: 1024px) {
-  h1 {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-  }
-}
 
 h2 {
   font-family: "Avenir Next";
@@ -200,12 +278,6 @@ h2 {
   line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
-  h2 {
-    font-size: 2.25rem;
-    line-height: 3rem;
-  }
-}
-@media screen and (min-width: 1024px) {
   h2 {
     font-size: 2.25rem;
     line-height: 3rem;
@@ -224,26 +296,14 @@ h3 {
     line-height: 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
-  h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
 
 p {
   font-family: "Avenir Next";
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.375rem;
 }
 @media screen and (min-width: 768px) {
-  p {
-    font-size: 1.3rem;
-    line-height: 1.375rem;
-  }
-}
-@media screen and (min-width: 1024px) {
   p {
     font-size: 1.3rem;
     line-height: 1.375rem;
@@ -369,7 +429,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .biography__tagline {
-    font-size: 1.41rem;
+    font-size: 1.375rem;
     line-height: 2rem;
   }
 }
@@ -396,6 +456,7 @@ li {
 }
 .biography__text {
   padding: 0.5rem 0;
+  font-size: 1.1rem;
 }
 @media screen and (min-width: 768px) {
   .biography__text {

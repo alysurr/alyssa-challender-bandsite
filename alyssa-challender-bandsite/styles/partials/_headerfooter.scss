@@ -73,38 +73,86 @@ footer {
     background-color: $band-site-black;
     width: 100%;
     color: #fff;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
+    position: relative;
     @include tablet {
+        padding: 3.5rem 2.5rem;
     }
     @include desktop {
+        padding: 3.5rem 8rem;
     }   
 }
 
-
 .contact {
-    &__title {
-        
+    @include tablet {
+        display: flex;
+        align-items: center;
+        width: 60%;
     }
+
     &__icon-container {
         display: flex;
         justify-content: space-between;
-        width: 50%;
+        width: 45%;
         padding: 1rem 0;
+        @include tablet {
+            width: 20%;
+        }
+        @include desktop {
+        }
     }
     &__icon {
-        height: 1.875rem;
+        height: 1.75rem;
+        @include tablet {
+            margin-left: 2rem;
+        }
+        @include desktop {
+        } 
+        
     }
     &__container {
-
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
     }
+    @include desktop {
+        width: 50%;
+    }   
+    @include desktop {
+        width: 70%;
+    }
+    }
+    
     &__info {
+        padding: .25rem 0;
 
     }
     &__name {
-        font-weight: 500;
         padding: 1rem 0;
+        @include tablet {
+            margin-bottom: .75rem;
+        }
+        & p {
+            font-weight: 500;
+            @include tablet {
+                font-size: .9rem;
+            }
+        }
     }
-    &__details, &__email {
+    &__details {
+        padding-bottom: 1rem;
+        @include tablet {
+            margin-bottom: .75rem;
+        }
+        & p {
+            @include tablet {
+                font-size: .9rem;
+            }
+        }
+    }
+    &__email {
+        font-family: 'Avenir Next';
+        font-size: .9rem;
         padding-bottom: 1rem;
     }
 }
@@ -112,9 +160,19 @@ footer {
 .copyright p {
     font-size: 0.875rem;
     @include tablet {
-        font-size: 1rem;
+        padding-top: 2rem;
+        font-size: .85rem;
+    }
+}
+
+.footer-bandsite-link {
+    @include tablet {
+        position: absolute;
+        top: 1.25rem;
+        right: 0rem;
     }
     @include desktop {
-        font-size: 1rem;
+        right: 8rem;
     }
+
 }
