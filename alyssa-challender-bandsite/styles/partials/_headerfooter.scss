@@ -15,6 +15,18 @@ header {
     }   
 }
 
+.header__logo {
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    @include tablet {
+        padding: 1.7rem 2.5rem;
+    }
+    @include desktop {
+        padding: 1.7rem 2.5rem 1.7rem 8rem;
+    }
+}
+
 .site-name {
     text-transform: uppercase;
     font-weight: 400;
@@ -98,26 +110,18 @@ footer {
         @include tablet {
             width: 20%;
         }
-        @include desktop {
-        }
     }
     &__icon {
         height: 1.75rem;
         @include tablet {
             margin-left: 2rem;
-        }
-        @include desktop {
-        } 
-        
+        }        
     }
     &__container {
     @include tablet {
         display: flex;
         justify-content: space-between;
     }
-    @include desktop {
-        width: 50%;
-    }   
     @include desktop {
         width: 70%;
     }
@@ -168,11 +172,10 @@ footer {
 .footer-bandsite-link {
     @include tablet {
         position: absolute;
-        top: 1.25rem;
-        right: 0rem;
+        top: 4.75rem;
+        right: 2.5rem;
     }
     @include desktop {
         right: 8rem;
     }
-
 }

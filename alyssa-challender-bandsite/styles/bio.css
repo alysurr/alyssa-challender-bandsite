@@ -63,6 +63,22 @@ header {
   }
 }
 
+.header__logo {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding: 1.7rem 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    padding: 1.7rem 2.5rem 1.7rem 8rem;
+  }
+}
+
 .site-name {
   text-transform: uppercase;
   font-weight: 400;
@@ -178,11 +194,6 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   .contact__container {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .contact__container {
     width: 70%;
   }
 }
@@ -237,8 +248,8 @@ footer {
 @media screen and (min-width: 768px) {
   .footer-bandsite-link {
     position: absolute;
-    top: 1.25rem;
-    right: 0rem;
+    top: 4.75rem;
+    right: 2.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
