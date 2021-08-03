@@ -258,6 +258,78 @@ footer {
   }
 }
 
+.shows-hero {
+  display: flex;
+  align-items: center;
+  background-image: url(../../assets/Images/hero-shows.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 35vh;
+}
+@media screen and (min-width: 768px) {
+  .shows-hero {
+    height: 45vh;
+    background-position: bottom;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows-hero {
+    height: 70vh;
+    background-position: center;
+  }
+}
+.shows-hero__subtitle {
+  position: absolute;
+  color: #fff;
+  margin: 1rem;
+  top: 2rem;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .shows-hero__subtitle {
+    margin: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows-hero__subtitle {
+    margin: 0 8rem;
+  }
+}
+.shows-hero__title {
+  position: absolute;
+  color: #fff;
+  margin: 1rem;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .shows-hero__title {
+    margin: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows-hero__title {
+    margin: 0 8rem;
+  }
+}
+.shows-hero__background {
+  width: 100%;
+  height: 35vh;
+  background-color: #323232;
+  opacity: 0.5;
+}
+@media screen and (min-width: 768px) {
+  .shows-hero__background {
+    height: 45vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows-hero__background {
+    height: 70vh;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;

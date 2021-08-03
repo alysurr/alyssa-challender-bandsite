@@ -3,6 +3,8 @@
 @use 'partials/typography' as *;
 @use 'partials/gallery';
 @use 'partials/headerfooter';
+@use 'partials/shows';
+
 
 *, *::before, *::after {
     box-sizing: border-box;
