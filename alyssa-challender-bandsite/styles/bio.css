@@ -333,6 +333,8 @@ footer {
 .shows {
   font-family: "Avenir Next";
   margin: 1rem;
+}
+.shows-list {
   border-bottom: 3px solid #E1E1E1;
 }
 .shows__title {

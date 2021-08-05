@@ -63,7 +63,10 @@
 .shows {
     font-family: 'Avenir Next';
     margin: 1rem;
+
+    &-list {
     border-bottom: 3px solid $band-site-mercury;
+    }
     &__title {
         font-size: 3rem;
         padding: 1.5rem 0;
