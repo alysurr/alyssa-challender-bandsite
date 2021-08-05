@@ -59,3 +59,42 @@
         }   
     }
 }
+
+.shows {
+    font-family: 'Avenir Next';
+    margin: 1rem;
+    border-bottom: 3px solid $band-site-mercury;
+    &__title {
+        font-size: 3rem;
+        padding: 1.5rem 0;
+    }
+
+    &__label {
+        font-size: .9rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $band-site-silver;
+        margin: 1rem 0;
+    }
+
+    &__info {
+        font-size: 1.2rem;
+
+        &--bold {
+            font-weight: 500;
+        }
+    }
+
+    &__buy {
+        background-color: $band-site-black;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem 0;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+}
