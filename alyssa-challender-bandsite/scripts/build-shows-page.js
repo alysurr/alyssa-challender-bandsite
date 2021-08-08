@@ -42,7 +42,7 @@ const showsList = document.querySelector('.shows-list');
     <div class="shows__label">Location</div>
     <div class="shows__info">San Francisco, CA</div>
     
-    <div class="shows__buy"><a href="/">Buy Tickets</a></div>
+    <div class="button shows__buy"><a href="/">Buy Tickets</a></div>
 </section> */
 
 const generateShowContent = (showData) => {
