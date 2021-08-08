@@ -10,12 +10,12 @@
 <body>
     <header>
         <div class="header__logo"><a href="/"><img src="assets/Logo/Logo-bandsite.svg" alt="band logo"></a></div>
-        <div class="nav-bar">
+        <section class="nav-bar">
             <ul class="nav-bar__list">
                 <li class="nav-bar__item nav-bar__item--active"><a href="/">Biography</a></li>
                 <li class="nav-bar__item"><a href="/pages/shows.html">Shows</a></li>
             </ul>
-        </div>
+        </section>
     </header>
 
     <section class="hero">
@@ -52,13 +52,16 @@
         </div>
     </section>
 
-    <section class="comments">
-    <form action="results.html" method="GET">
-        <label>Name</label>
-        <input>
-        <label>Comment</label>
-        <input>
+    <section class="comments-container">
+        <h2 class="comments__title">Join the Conversation</h2>
         
+    <form id="Form" class="comments">
+        <img src="assets/Images/Mohan-muruge.jpg" alt="mohan muruge profile picture" class="comments__image">
+        <label for="name" class="comments__label">Name</label>
+        <input type="text" id="name" name="name"  class="comments__input-name"placeholder="Enter your name">
+        <label for="comment" class="comments__label">Comment</label>
+        <input type="text" id="comment" name="comment"  class="comments__input-comment"placeholder="Add a new comment">
+        <button type="submit" class="comments__submit">Comment</button>
     </form>
 
     </section>
@@ -67,17 +70,17 @@
 
 
     <footer>
-        <div class="contact">
+        <section class="contact">
         <h2>Get in Touch</h2>
         <div class="contact__icon-container">
             <a href="https://www.instagram.com/TheBeesKneesBand"><img src="assets/Icons/SVG/Icon-instagram.svg" alt="instagram logo" class="contact__icon"></a>
             <a href="https://www.facebook.com/TheBeesKneesBand"><img src="assets/Icons/SVG/Icon-facebook.svg" alt="facebook logo" class="contact__icon"></a>
             <a href="https://www.twitter.com/TheBeesKneesBand"><img src="assets/Icons/SVG/Icon-twitter.svg" alt="twitter logo" class="contact__icon"></a>
         </div>
-        </div>
+        </section>
 
         <div class="contact__container">
-            <div class="contact__info">
+            <section class="contact__info">
                 <div class="contact__name">
                     <p>Cam Adams</p>
                     <p>The Bees Knees Management</p>
@@ -87,8 +90,8 @@
                     <p>New York, NY 10012, USA</p>
                 </div>
                 <div class="contact__email">info@thebeesknees.com</div>
-            </div>
-            <div class="contact__info">
+            </section>
+            <section class="contact__info">
                 <div class="contact__name">
                     <p>Pearl Gregg</p>
                     <p>Limitless Artist Group</p>
@@ -98,8 +101,8 @@
                     <p>US / South America / Japan</p>
                 </div>
                 <div class="contact__email">pearl.gregg@limitlessag.com</div>
-            </div>
-            <div class="contact__info">
+            </section>
+            <section class="contact__info">
                 <div class="contact__name">
                     <p>Carson Whyte</p>
                     <p>ARCH Entertainment</p>
@@ -109,16 +112,16 @@
                     <p>UK / EU / AU</p>
                 </div>
                 <div class="contact__email">cwhyte@archentertainment.com</div>
-            </div>
+            </section>
         </div>
 
         <section class="footer-bandsite-link">
             <a href="/"><img src="assets/Logo/Logo-bandsite.svg" alt="band logo"></a>
         </section>
 
-        <div class="copyright">
+        <section class="copyright">
             <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
-        </div>
+        </section>
     </footer>
 
     <script src="./scripts/index-page.js"></script>
