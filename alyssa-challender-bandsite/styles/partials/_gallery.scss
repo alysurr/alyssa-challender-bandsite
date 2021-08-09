@@ -3,7 +3,7 @@
 @use 'typography' as *;
 
 .gallery {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
     background-color: $band-site-albaster;
     @include tablet {
         padding: 2.5rem;
