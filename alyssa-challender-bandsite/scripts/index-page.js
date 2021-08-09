@@ -44,7 +44,7 @@ const generateComments = (display) => {
     dateElement.innerText = display.date;
     flexElement.appendChild(dateElement);
 
-    const textElement = document.createElement('p');
+    const textElement = document.createElement('div');
     textElement.classList.add('comments__text');
     textElement.innerText = display.comment;
     commentElement.appendChild(textElement);
@@ -60,8 +60,6 @@ const generateComments = (display) => {
             console.log(item[key]);
         }
     }
-
-
     return commentElement;
 
 }
@@ -83,16 +81,16 @@ const generateCommentList = (display) => {
 
 generateCommentList(display);
 
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault();
+form.addEventListener('submit', (event) => {
+     event.preventDefault();
 
-//     if(name.value === '' || name.value == null) {
-//         name.style.borderColor="#D22D2D";
-//     }
-//     if(comment.value === '' || comment.value == null) {
-//         comment.style.borderColor="#D22D2D";
-//     }
-// })
+     if(name.value === '' || name.value == null) {
+         name.style.borderColor="#D22D2D";
+     }
+     if(comment.value === '' || comment.value == null) {
+         comment.style.borderColor="#D22D2D";
+     }
+ })
 
 
 // commentInfo.unshift(newComment);

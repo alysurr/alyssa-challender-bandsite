@@ -210,7 +210,7 @@ li {
                 padding: 0 6rem;
             } 
         }
-    &-container {
+    &-container, &-display {
         font-family: 'Avenir Next';
         border-bottom: 2px solid $band-site-mercury;
         @include tablet {
@@ -267,9 +267,6 @@ li {
         @include tablet {
             padding: 1rem;
         }
-        @include desktop {
-            
-        } 
         &:focus {
             outline: none;
             border: 1px solid $band-site-black;
@@ -292,9 +289,6 @@ li {
         @include tablet {
             padding: 1rem;
         }
-        @include desktop {
-            
-        } 
         &:focus {
             outline: none;
             border: 1px solid $band-site-black;
@@ -334,17 +328,31 @@ li {
         margin: 1rem 0;
         justify-content: space-between;
         align-items: center;
+        @include tablet{
+            margin-top: 0.5rem;
+        }
     }
     &__name {
         font-size: 1rem;
+        @include tablet {
+            font-size: .9rem;
+        }
     }
     &__date {
         font-family: 'Avenir Next';
+        font-weight: 400;
         font-size: 1rem;
         color: $band-site-silver;
+        @include tablet {
+            font-size: .9rem;
+        }
     }
     &__text {
-        margin: 0 0 0 4rem;
+        margin: 0 0 0 3.75rem;
+        @include tablet {
+            font-weight: 400;
+            font-size: .9rem;
+        }
 
     }
 }
