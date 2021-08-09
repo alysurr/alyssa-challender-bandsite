@@ -722,6 +722,7 @@ li {
 }
 .comments-container {
   font-family: "Avenir Next";
+  border-bottom: 2px solid #E1E1E1;
 }
 @media screen and (min-width: 768px) {
   .comments-container {
@@ -746,6 +747,15 @@ li {
      object-position: left;
   float: left;
   margin: 1.25rem 1rem 0 0;
+}
+.comments__image-placeholder {
+  background-color: #E1E1E1;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 100%;
+  float: left;
+  margin-right: 1rem;
+  margin-top: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .comments__image {
@@ -829,4 +839,25 @@ li {
     padding: 0.5rem;
     font-size: 1rem;
   }
+}
+.comments__input {
+  padding: 0.25rem 0 1rem 0;
+  border-bottom: 2px solid #E1E1E1;
+}
+.comments__flex {
+  display: flex;
+  margin: 1rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.comments__name {
+  font-size: 1rem;
+}
+.comments__date {
+  font-family: "Avenir Next";
+  font-size: 1rem;
+  color: #AFAFAF;
+}
+.comments__text {
+  margin: 0 0 0 4rem;
 }/*# sourceMappingURL=bio.css.map */
