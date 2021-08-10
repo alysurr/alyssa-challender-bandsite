@@ -52,7 +52,7 @@ const generateComments = (display) => {
     for(let i = 0; i < display.length; i++) {        
         const item = display[i];
         const commentsData = display;
-        const commentCard = generateCommentContent(commentsData);
+        const commentCard = generateComments(commentsData);
     
         container.appendChild(commentCard);
 
@@ -61,27 +61,14 @@ const generateComments = (display) => {
         }
     }
     return commentElement;
-
 }
-
-
 
 //Outline red if not filled out
 
 form.addEventListener('submit', (event) => {
      event.preventDefault();
           //Get Date
-          var timestamp = Date.now();
-          var d = new Date(timestamp);
-          var date = d.getDate();
-          var month = d.getMonth(); 
-          var year = d.getFullYear();
-          var monthDateYear  = (month+1) + "/" + date + "/" + year;
-          
-          console.log(monthDateYear);
 
-    var newComment = this.value;
-    display.push(newComment);
 
 
      if(username.value === '' || username.value == null) {
@@ -93,7 +80,15 @@ form.addEventListener('submit', (event) => {
      }
  })
 
- console.log(display);
+
+ var timestamp = Date.now();
+ var d = new Date(timestamp);
+ var date = d.getDate();
+ var month = d.getMonth(); 
+ var year = d.getFullYear();
+ var monthDateYear  = (month+1) + "/" + date + "/" + year;
+ 
+
 
 const generateCommentList = (display) => {
     for (let i = 0; i < display.length; i++) {
@@ -103,11 +98,16 @@ const generateCommentList = (display) => {
     }
   }
 
+  function newComment() {
+    var usernameInput = document.getElementById('username').value;
+    var textInput = document.getElementById('comment').value;
+    display.push({username:usernameInput, comment:textInput, date:monthDateYear});
+    console.log(display);
+    return false;
+  }
 
 generateCommentList(display);
 
 // commentInfo.unshift(newComment);
 // commentList.innerHTML = '';
 // displayComment(commentInfo);
-
-// stopProp();
