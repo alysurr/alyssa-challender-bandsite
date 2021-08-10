@@ -1,16 +1,16 @@
 const display = [
     {
-        name: "Connor Walton",
+        username: "Connor Walton",
         comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
         date: "02/17/2021"
     },
     {
-        name: "Emilie Beach",
+        username: "Emilie Beach",
         comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
         date: "01/09/2021"
     },
     {
-        name: "Connor Walton",
+        username: "Connor Walton",
         comment: "I can't stop listening. Every time I hear one of their songs-the vocals-it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
         date: "12/20/2020"
     }
@@ -19,7 +19,7 @@ const display = [
 const container = document.querySelector('.comments-display')
 
 const form = document.getElementById('form');
-const name = document.getElementById('name');
+const name = document.getElementById('username');
 const comment = document.getElementById('comment');
 
 const generateComments = (display) => {
@@ -36,7 +36,7 @@ const generateComments = (display) => {
 
     const nameElement = document.createElement('h3');
     nameElement.classList.add('comments__name');
-    nameElement.innerText = display.name;
+    nameElement.innerText = display.username;
     flexElement.appendChild(nameElement);
     
     const dateElement = document.createElement('div');
@@ -65,33 +65,46 @@ const generateComments = (display) => {
 }
 
 
-const generateCommentList = (display) => {
-    for (let i = 0; i < display.length; i++) {
-      const commentData = display[i];
-      console.log('Data: ', commentData);
 
-      const commentCard = generateComments(commentData);
-      console.log('Card: ', commentCard);
-  
-      container.appendChild(commentCard);
-    }
-  }
-
-
-
-generateCommentList(display);
+//Outline red if not filled out
 
 form.addEventListener('submit', (event) => {
      event.preventDefault();
+          //Get Date
+          var timestamp = Date.now();
+          var d = new Date(timestamp);
+          var date = d.getDate();
+          var month = d.getMonth(); 
+          var year = d.getFullYear();
+          var monthDateYear  = (month+1) + "/" + date + "/" + year;
+          
+          console.log(monthDateYear);
 
-     if(name.value === '' || name.value == null) {
-         name.style.borderColor="#D22D2D";
+    var newComment = this.value;
+    display.push(newComment);
+
+
+     if(username.value === '' || username.value == null) {
+         username.style.borderColor="#D22D2D";
      }
+
      if(comment.value === '' || comment.value == null) {
          comment.style.borderColor="#D22D2D";
      }
  })
 
+ console.log(display);
+
+const generateCommentList = (display) => {
+    for (let i = 0; i < display.length; i++) {
+      const commentData = display[i];
+      const commentCard = generateComments(commentData);
+      container.appendChild(commentCard);
+    }
+  }
+
+
+generateCommentList(display);
 
 // commentInfo.unshift(newComment);
 // commentList.innerHTML = '';

@@ -62,10 +62,15 @@ const generateShowContent = (shows) => {
     locationLabelElement.innerText = 'Location';
     locationElement.appendChild(locationLabelElement);
 
-    const buyElement = document.createElement('div');
+    const buyElement = document.createElement('button');
     buyElement.classList.add('shows__buy');
     buyElement.innerText = "Buy Tickets";
     showElement.appendChild(buyElement);
+
+    // Console.log location on click
+    buyElement.addEventListener('click', (event) => {
+        console.log(listLocation);
+    })
 
     const listDate = document.createElement('li');
     listDate.classList.add('shows__date', 'dates')
@@ -107,7 +112,6 @@ const generateCardList = (shows) => {
       showsList.appendChild(showCard);
     }
   }
-
-
-
+  
 generateCardList(shows);
+

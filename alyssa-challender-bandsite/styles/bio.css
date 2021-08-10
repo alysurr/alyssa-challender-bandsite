@@ -460,6 +460,7 @@ footer {
   font-weight: 500;
   color: white;
   display: flex;
+  width: 100%;
   justify-content: center;
   margin: 1.5rem 0;
   padding: 0.75rem;
@@ -469,12 +470,12 @@ footer {
   .shows__buy {
     font-size: 0.9rem;
     padding: 0.7rem 1.9rem;
-    width: 60%;
+    width: 65%;
   }
 }
 @media screen and (min-width: 1024px) {
   .shows__buy {
-    width: 55%;
+    width: 60%;
   }
 }
 
