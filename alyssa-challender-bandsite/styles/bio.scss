@@ -210,9 +210,11 @@ li {
                 padding: 0 6rem;
             } 
         }
+    &-container {
+        border-bottom: 2px solid $band-site-mercury;
+    }
     &-container, &-display {
         font-family: 'Avenir Next';
-        border-bottom: 2px solid $band-site-mercury;
         @include tablet {
             width: 85%;
             justify-content: space-around;

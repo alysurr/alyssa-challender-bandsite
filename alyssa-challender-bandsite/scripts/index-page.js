@@ -67,10 +67,6 @@ const generateComments = (display) => {
 
 form.addEventListener('submit', (event) => {
      event.preventDefault();
-          //Get Date
-
-
-
      if(username.value === '' || username.value == null) {
          username.style.borderColor="#D22D2D";
      }
@@ -107,7 +103,3 @@ const generateCommentList = (display) => {
   }
 
 generateCommentList(display);
-
-// commentInfo.unshift(newComment);
-// commentList.innerHTML = '';
-// displayComment(commentInfo);
