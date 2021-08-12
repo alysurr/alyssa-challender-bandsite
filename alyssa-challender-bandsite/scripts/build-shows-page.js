@@ -1,36 +1,55 @@
 
-const shows = [
-    {
-        date: 'Mon Sept 06 2021',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Tues Sept 21 2021',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Fri Oct 15 2021',
-        venue: 'View Lounge',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Sat Nov 06 2021',
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Fri Nov 26 2021',
-        venue: 'Moscow Center',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Wed Dec 15 2021',
-        venue: 'Press Club',
-        location: 'San Francisco, CA'
-    }
-]
+// const shows = [
+//     {
+//         date: 'Mon Sept 06 2021',
+//         venue: 'Ronald Lane',
+//         location: 'San Francisco, CA'
+//     },
+//     {
+//         date: 'Tues Sept 21 2021',
+//         venue: 'Pier 3 East',
+//         location: 'San Francisco, CA'
+//     },
+//     {
+//         date: 'Fri Oct 15 2021',
+//         venue: 'View Lounge',
+//         location: 'San Francisco, CA'
+//     },
+//     {
+//         date: 'Sat Nov 06 2021',
+//         venue: 'Hyatt Agency',
+//         location: 'San Francisco, CA'
+//     },
+//     {
+//         date: 'Fri Nov 26 2021',
+//         venue: 'Moscow Center',
+//         location: 'San Francisco, CA'
+//     },
+//     {
+//         date: 'Wed Dec 15 2021',
+//         venue: 'Press Club',
+//         location: 'San Francisco, CA'
+//     }
+// ]
+
+const SHOWS_API_URL = "https://project-1-api.herokuapp.com/comments?api_key=<6b54164b-e957-4217-9334-507dbcf217b9>";
+
+const SHOWS_API_URL = 'https://project-1-api.herokuapp.com';
+const SHOWS_API_KEY = '6b54164b-e957-4217-9334-507dbcf217b9';
+
+
+const shows = (shows) => {
+    axios
+        .post(`${FAVE_API_URL}/showdates?api_key=${FAVE_API_KEY}`, {
+            date: shows.date,
+            venue: shows.venue,
+            location: shows.location,
+        })
+        .then(shows => {
+            const showsData = shows.dateLabelElement;
+            generateShowContent(showsData);
+        })
+ }
 
 const showsList = document.querySelector('.shows-list');
 
