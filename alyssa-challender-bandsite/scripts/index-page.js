@@ -4,11 +4,12 @@ const generateComments =
     axios
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
     .then(display => {
-      console.log(display.data)
+    
       const commentData = display.data;
-      console.log(commentData)
+
       const container = document.querySelector('.comments-display')
       container.innerText = "";
+
       commentData.forEach((comment) => {
         const commentElement = document.createElement('article');
         commentElement.classList.add('comments__input');
@@ -29,7 +30,8 @@ const generateComments =
         
         const dateElement = document.createElement('div');
         dateElement.classList.add('comments__date');
-        dateElement.innerText = comment.timestamp;
+        let date = new Date(comment.timestamp).toString();
+        dateElement.innerText = date.split(" ").slice(1,4).join(' ');
         flexElement.appendChild(dateElement);
 
         const textElement = document.createElement('div');

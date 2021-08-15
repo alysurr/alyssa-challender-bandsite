@@ -49,12 +49,14 @@ const fetchShows =
                 e.preventDefault();
                 console.log(show.place)
             })
+
             const listDate = document.createElement('li');
-            listDate.classList.add('shows__date', 'dates')
-            listDate.innerText = show.date;
+            listDate.classList.add('shows__date', 'dates');
+            let timestamp = new Date(show.date).toString();
+            console.log(timestamp);
+            listDate.innerText = timestamp.split(" ").slice(1,4).join(' ');
             dateElement.appendChild(listDate);
 
-           
 
             
             const listVenue = document.createElement('li');
