@@ -4,13 +4,15 @@ const generateComments =
     axios
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
     .then(display => {
-    
-      const commentData = display.data;
 
-      const container = document.querySelector('.comments-display')
-      container.innerText = "";
+    const commentData = display.data;
+    const container = document.querySelector('.comments-display')
+    container.innerText = "";
 
-      commentData.forEach((comment) => {
+    //Makes so that new comments display at the top
+    commentData.sort((a,b) => b.timestamp - a.timestamp);
+
+    commentData.forEach((comment) => {
         const commentElement = document.createElement('article');
         commentElement.classList.add('comments__input');
         container.appendChild(commentElement);
@@ -34,8 +36,6 @@ const generateComments =
         dateElement.innerText = date.split(" ").slice(1,4).join(' ');
         flexElement.appendChild(dateElement);
 
-        console.log(comment.timestamp)
-
         const textElement = document.createElement('div');
         textElement.classList.add('comments__text');
         textElement.innerText = comment.comment;
@@ -57,18 +57,16 @@ form.addEventListener('submit', (e) => {
          comment.style.borderColor="#D22D2D";
      }
 
-     console.log(e.target.username.value)
-
+    
     axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`, {
-      name: e.target.username.value,
-      comment: e.target.comment.value,
-      timestamp: e.timestamp
+        name: e.target.username.value,
+        comment: e.target.comment.value,
+        timestamp: e.timestamp
 
-      })
-      .then(response=>{
-          console.log(response);
-      }).catch(error => {
-          console.log(error);
-      });
+    }).then(response=>{
+        console.log(response);
+    }).catch(error => {
+        console.log(error);
+    });
  })
 

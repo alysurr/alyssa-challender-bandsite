@@ -466,10 +466,15 @@ footer {
   border-radius: 5px;
   border: none;
 }
+.shows__buy:hover {
+  background-color: #AFAFAF;
+  color: #323232;
+  font-weight: 600;
+}
 @media screen and (min-width: 768px) {
   .shows__buy {
     font-size: 0.9rem;
-    padding: 0.7rem 1.9rem;
+    padding: 0.7rem 0.6em;
     width: 65%;
   }
 }

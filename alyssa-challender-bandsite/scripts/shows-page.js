@@ -1,15 +1,14 @@
 const api_key = `02cf3fb8-71ca-424d-a603-65349c18e2e6`;
 
-
-
 const fetchShows =
     axios
     .get(`https://project-1-api.herokuapp.com/showdates?api_key=${api_key}`)
     .then(allShows => {
         const showData = allShows.data;
-        console.log(showData)
+
         const showContainer = document.querySelector('.shows-list')
         showContainer.innerText="";
+
         showData.forEach((show) => {            
             const showElement = document.createElement('article');
             showElement.classList.add('shows');
