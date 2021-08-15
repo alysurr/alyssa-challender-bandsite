@@ -6,7 +6,6 @@ const fetchShows =
     axios
     .get(`https://project-1-api.herokuapp.com/showdates?api_key=${api_key}`)
     .then(allShows => {
-        console.log(allShows.data)
         const showData = allShows.data;
         console.log(showData)
         const showContainer = document.querySelector('.shows-list')
@@ -52,13 +51,11 @@ const fetchShows =
 
             const listDate = document.createElement('li');
             listDate.classList.add('shows__date', 'dates');
-            let timestamp = new Date(show.date).toString();
-            console.log(timestamp);
-            listDate.innerText = timestamp.split(" ").slice(1,4).join(' ');
+            let timestamp = parseInt(show.date);
+            let date = new Date(timestamp).toString();
+            listDate.innerText = date.split(" ").slice(1,4).join(' ');
             dateElement.appendChild(listDate);
 
-
-            
             const listVenue = document.createElement('li');
             listVenue.classList.add('shows__info', 'venue')
             listVenue.innerText = show.place;
