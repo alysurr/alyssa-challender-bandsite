@@ -266,16 +266,16 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  height: 48vh;
+  height: 30vh;
 }
 @media screen and (min-width: 768px) {
   .shows-hero {
-    height: 45vh;
+    height: 36vh;
   }
 }
 @media screen and (min-width: 1024px) {
   .shows-hero {
-    height: 70vh;
+    height: 50vh;
     background-position: 50% 30%;
   }
 }
@@ -326,24 +326,23 @@ footer {
 }
 .shows-hero__background {
   width: 100%;
-  height: 48vh;
+  height: 30vh;
   background-color: #323232;
   opacity: 0.5;
 }
 @media screen and (min-width: 768px) {
   .shows-hero__background {
-    height: 45vh;
+    height: 36vh;
   }
 }
 @media screen and (min-width: 1024px) {
   .shows-hero__background {
-    height: 70vh;
+    height: 50vh;
   }
 }
 .shows-hero__soundcloud {
   display: flex;
   position: absolute;
-  justify-content: flex-end;
   width: 93%;
   margin: 1rem;
   top: 11rem;
@@ -465,6 +464,7 @@ footer {
   margin: 1.5rem 0;
   padding: 0.75rem;
   border-radius: 5px;
+  border: none;
 }
 @media screen and (min-width: 768px) {
   .shows__buy {
