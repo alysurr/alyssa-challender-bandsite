@@ -1,3 +1,25 @@
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @font-face {
   font-family: "Avenir Next";
   src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("otf"), url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
@@ -194,7 +216,7 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   .contact__container {
-    width: 70%;
+    width: 70vh;
   }
 }
 .contact__info {
@@ -467,8 +489,10 @@ footer {
   border: none;
 }
 .shows__buy:hover {
-  background-color: #AFAFAF;
-  color: #323232;
+  background: linear-gradient(200deg, #8300b0, #ce26a5, #8300b0, #5b00bc);
+  background-size: 800% 800%;
+  -webkit-animation: gradient 10s ease infinite;
+  animation: gradient 10s ease infinite;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -835,7 +859,10 @@ li {
   border: none;
 }
 .comments__submit:hover {
-  background-color: #AFAFAF;
+  background: linear-gradient(200deg, #8300b0, #ce26a5, #8300b0, #5b00bc);
+  background-size: 800% 800%;
+  -webkit-animation: gradient 10s ease infinite;
+  animation: gradient 10s ease infinite;
 }
 @media screen and (min-width: 768px) {
   .comments__submit {

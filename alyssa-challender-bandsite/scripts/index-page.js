@@ -9,7 +9,7 @@ var icons =
     `../assets/Images/random icons/icon7.jpg`]
 
 
-
+// API Key
 const api_key = `5038d37e-66d9-44f2-a3d9-e735f8f425c6`;
 
 const generateComments =
@@ -17,13 +17,14 @@ const generateComments =
     .get(`https://project-1-api.herokuapp.com/comments?api_key=${api_key}`)
     .then(display => {
 
-    const commentData = display.data;
     const container = document.querySelector('.comments-display')
     container.innerText = "";
 
     //Makes so that new comments display at the top
+    const commentData = display.data;
     commentData.sort((a,b) => b.timestamp - a.timestamp);
 
+    //Generate comments
     commentData.forEach((comment) => {
         const commentElement = document.createElement('article');
         commentElement.classList.add('comments__input');
@@ -49,6 +50,7 @@ const generateComments =
         
         const dateElement = document.createElement('div');
         dateElement.classList.add('comments__date');
+        //change date to string then cut out unnecessary info
         let date = new Date(comment.timestamp).toString();
         dateElement.innerText = date.split(" ").slice(1,4).join(' ');
         flexElement.appendChild(dateElement);

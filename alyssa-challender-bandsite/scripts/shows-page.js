@@ -1,3 +1,4 @@
+// API Key
 const api_key = `5038d37e-66d9-44f2-a3d9-e735f8f425c6`;
 
 const fetchShows =
@@ -9,6 +10,7 @@ const fetchShows =
         const showContainer = document.querySelector('.shows-list')
         showContainer.innerText="";
 
+        //Generate show list
         showData.forEach((show) => {            
             const showElement = document.createElement('article');
             showElement.classList.add('shows');
@@ -43,6 +45,7 @@ const fetchShows =
             buyElement.innerText = "Buy Tickets";
             showElement.appendChild(buyElement);
 
+            // console log venue when user clicks on "buy tickets"
             buyElement.addEventListener('click', (e) => {
                 e.preventDefault();
                 console.log(show.place)
@@ -50,6 +53,7 @@ const fetchShows =
 
             const listDate = document.createElement('li');
             listDate.classList.add('shows__date', 'dates');
+            //change date to integer, then to date string, then cut out unnecessary info
             let timestamp = parseInt(show.date);
             let date = new Date(timestamp).toString();
             listDate.innerText = date.split(" ").slice(1,4).join(' ');

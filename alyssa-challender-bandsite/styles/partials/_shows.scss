@@ -188,8 +188,12 @@
         border-radius: 5px;
         border: none;
         &:hover {
-            background-color: $band-site-silver;
-            color: $band-site-black;
+            background: linear-gradient(200deg, #8300b0, #ce26a5, #8300b0, #5b00bc);
+            background-size: 800% 800%;
+
+            -webkit-animation: gradient 10s ease infinite;
+            -moz-animation: gradient 10s ease infinite;
+            animation: gradient 10s ease infinite;
             font-weight: 600;
         }
         @include tablet {
