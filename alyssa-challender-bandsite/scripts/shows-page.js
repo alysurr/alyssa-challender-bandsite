@@ -1,4 +1,4 @@
-const api_key = `02cf3fb8-71ca-424d-a603-65349c18e2e6`;
+const api_key = `5038d37e-66d9-44f2-a3d9-e735f8f425c6`;
 
 const fetchShows =
     axios

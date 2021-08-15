@@ -756,20 +756,14 @@ li {
   float: left;
   margin: 1.25rem 1rem 0 0;
 }
-.comments__image-placeholder {
+.comments__image-random {
   background-color: #E1E1E1;
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 100%;
   float: left;
   margin-right: 1rem;
-  margin-top: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .comments__image {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
+  margin-top: 0.5rem;
 }
 .comments__label {
   font-size: 0.9rem;
@@ -835,7 +829,6 @@ li {
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 1.5rem 0;
   padding: 0.75rem;
   border-radius: 5px;
@@ -848,7 +841,6 @@ li {
   .comments__submit {
     width: 30%;
     align-self: flex-end;
-    padding: 0.5rem;
     font-size: 1rem;
   }
 }

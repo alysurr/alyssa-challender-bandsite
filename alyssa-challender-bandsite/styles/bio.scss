@@ -67,6 +67,8 @@ li {
     list-style: none;
 }
 
+
+
 // Hero 
 
 .hero {
@@ -234,18 +236,14 @@ li {
         float: left;
         margin: 1.25rem 1rem 0 0;
 
-        &-placeholder {
+        &-random {
             background-color: $band-site-mercury;
             width: 2.75rem;
             height: 2.75rem;
             border-radius: 100%;
             float: left;
             margin-right: 1rem;
-            margin-top: 1.25rem;
-        }
-        @include tablet {
-            width: 3.2rem;
-            height: 3.2rem;
+            margin-top: .5rem;
         }
     }
 
@@ -309,7 +307,6 @@ li {
         color: white;
         display: flex;
         justify-content: center;
-        align-items: center;
         margin: 1.5rem 0;
         padding: .75rem;
         border-radius: 5px;
@@ -321,7 +318,6 @@ li {
         @include tablet {
             width: 30%;
             align-self: flex-end;
-            padding: .5rem;
             font-size: 1rem;
         }
     }

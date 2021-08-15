@@ -1,4 +1,16 @@
-const api_key = `02cf3fb8-71ca-424d-a603-65349c18e2e6`;
+// Generates random icons for comments without images
+var icons = 
+    [`../assets/Images/random icons/icon1.jpg`,
+    `../assets/Images/random icons/icon2.jpg`,
+    `../assets/Images/random icons/icon3.jpg`,
+    `../assets/Images/random icons/icon4.jpg`,
+    `../assets/Images/random icons/icon5.jpg`,
+    `../assets/Images/random icons/icon6.jpg`,
+    `../assets/Images/random icons/icon7.jpg`]
+
+
+
+const api_key = `5038d37e-66d9-44f2-a3d9-e735f8f425c6`;
 
 const generateComments =
     axios
@@ -18,8 +30,13 @@ const generateComments =
         container.appendChild(commentElement);
 
         const commentAside = document.createElement('aside');
-        commentAside.classList.add('comments__image-placeholder');
         commentElement.appendChild(commentAside);
+
+        const randIcon = document.createElement('img');
+        randIcon.classList.add('comments__image-random');
+        var icon = icons[Math.floor(Math.random()*icons.length)];
+        randIcon.src = icon
+        commentAside.appendChild(randIcon);
 
         const flexElement = document.createElement('div');
         flexElement.classList.add('comments__flex');
@@ -44,17 +61,17 @@ const generateComments =
 })
 
 
-
-
 form.addEventListener('submit', (e) => {
      e.preventDefault();
 
-     //Outline red if not filled out
+     //Outline red and don't post if either input not filled out
      if(username.value === '' || username.value == null) {
          username.style.borderColor="#D22D2D";
+         return;
      }
      if(comment.value === '' || comment.value == null) {
          comment.style.borderColor="#D22D2D";
+         return;
      }
 
     
