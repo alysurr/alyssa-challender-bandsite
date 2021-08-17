@@ -59,8 +59,23 @@ const generateComments =
         textElement.classList.add('comments__text');
         textElement.innerText = comment.comment;
         commentElement.appendChild(textElement);
+
+        const buttonElement = document.createElement('div');
+        buttonElement.classList.add('comments__buttons');
+        commentElement.appendChild(buttonElement);
+
+        // const likeElement = document.createElement('button');
+        // likeElement.classList.add('likes');
+        // likeElement.innerText = `❤ ${comment.likes}`
+        // buttonElement.appendChild(likeElement);
+
+        // const deleteElement = document.createElement('button');
+        // deleteElement.classList.add('delete');
+        // deleteElement.innerText = 'Delete'
+        // buttonElement.appendChild(deleteElement);
       })
 })
+
 
 
 form.addEventListener('submit', (e) => {
